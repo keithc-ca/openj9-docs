@@ -39,7 +39,7 @@ Test whether performance optimizations are negatively impacting an application.
 
 Locking optimizations typically reduce memory usage and improve performance. However, there might be some situations where a smaller heap size is achieved for an application, but overall application performance decreases.
 
-For example, if your application synchronizes on objects that are not typically synchronized on, such as `Java.lang.String`, run the following test:  
+For example, if your application synchronizes on objects that are not typically synchronized on, such as `Java.lang.String`, run the following test:
 Use the following command-line option to revert to behavior that is closer to earlier versions and monitor application performance:
 
     -Xlockword:mode=all

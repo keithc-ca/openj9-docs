@@ -49,7 +49,7 @@ If you require a system dump that contains details of all the native threads tha
    ```
    ulimit -c unlimited; ulimit -n unlimited; ulimit -d unlimited; ulimit -f unlimited;
    ```
-  
+
     Where:
 
    - `-c` sets core files
@@ -70,7 +70,7 @@ To examine a system dump you can use the [OpenJ9 dump viewer](tool_jdmpview.md) 
 If you want to use MAT to analyze your system dump, you must install the  Diagnostic Tool Framework for Java (DTFJ) plugin in the Eclipse IDE. Select the following menu items:
 
 ```
-Help > Install New Software > Work with "IBM Diagnostic Tool Framework for Java" > IBM Monitoring and Diagnostic Tools > Diagnostic Tool Framework for Java   
+Help > Install New Software > Work with "IBM Diagnostic Tool Framework for Java" > IBM Monitoring and Diagnostic Tools > Diagnostic Tool Framework for Java
 ```
 
 <!-- ==== END OF TOPIC ==== dump_systemdump.md ==== -->

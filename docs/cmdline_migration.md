@@ -76,7 +76,7 @@ You can use the following command-line options in OpenJ9, just as you did in Hot
 These HotSpot command-line options have equivalents in OpenJ9 that are not specified in the same way, but perform a related function:
 
 | HotSpot Option          | OpenJ9 Option                                    | Usage                                                     |
-|-------------------------|--------------------------------------------------|-----------------------------------------------------------|                                                                        
+|-------------------------|--------------------------------------------------|-----------------------------------------------------------|
 | `-Xcomp`                | [`-Xjit:count=0`](xjit.md#count)**<sup>1</sup>** | `-Xcomp` disables interpreted method invocations.         |
 | `-Xgc`                  | [`-Xgcpolicy`](xgcpolicy.md)**<sup>2</sup>**     | Configuring your garbage collection policy.               |
 | `-XX:+UseNUMA`          | [`-Xnuma:none`](xnumanone.md)**<sup>3</sup>**    | Controls non-uniform memory architecture (NUMA) awareness.|

@@ -31,7 +31,7 @@
 In versions of OpenJ9 before 0.23.0, this option controls garbage collection processing with compaction when the state of the OpenJ9 VM is set to idle.
 
 :fontawesome-solid-exclamation-triangle:{: .warn aria-hidden="true"} **Restrictions:**
-  
+
 1. This option was deprecated in release 0.15.0 due to operational changes. A compaction is now triggered by internal heuristics that look into the number of fragmented pages. Typically there is no need to force a compaction. This option will be removed in the future.
 2. This option applies only to Linux architectures when the Generational Concurrent (`gencon`) garbage collection policy is in use.
 3. This option is not effective if the object heap is configured to use large pages.

@@ -61,7 +61,7 @@ virtual memory          (kbytes, -v) unlimited
 
 To show hard limits, use `ulimit -Ha`.
 
-You can change limits for specific resources on a temporary basis by running the **ulimit** command. Alternatively, you can store limit settings in a configuration file, which is `/etc/security/limits` for AIX or `etc/security/limits.conf` for Linux. For more information about configuring resource limits, refer to the documentation for your operating system.   
+You can change limits for specific resources on a temporary basis by running the **ulimit** command. Alternatively, you can store limit settings in a configuration file, which is `/etc/security/limits` for AIX or `etc/security/limits.conf` for Linux. For more information about configuring resource limits, refer to the documentation for your operating system.
 
 The main use case for changing `ulimit` resources is when enabling a system dump to ensure that all the required data can be collected for analysis. For more information, see [Enabling a full system dump](dump_systemdump.md#enabling-a-full-system-dump-aix-and-linux).
 
@@ -189,9 +189,9 @@ The 16 MB and 16 GB page sizes, which are intended for very high performance env
 Large pages are typically referred to as *huge pages* on Linux systems. To configure huge page memory allocation, the kernel must support huge pages. If huge pages are supported, the following lines are present in the **/proc/meminfo** file:
 
 ```
-HugePages_Total:    
-HugePages_Free:     
-Hugepagesize:     
+HugePages_Total:
+HugePages_Free:
+Hugepagesize:
 ```
 
 If these lines do not exist, update your Linux kernel. If `HugePages_Total` has a value of `0`, huge pages are available, but not enabled. To enable huge pages, add the following line to your **/etc/sysctl.conf** file and reload the configuration by running `sysctl -p`:
@@ -226,7 +226,7 @@ For more information, see the following resources from Microsoft:
 - [Large page support](https://docs.microsoft.com/en-gb/windows/win32/memory/large-page-support)
 - [`GetLargePageMinimum` function (`memoryapi.h`)](https://docs.microsoft.com/en-gb/windows/win32/api/memoryapi/nf-memoryapi-getlargepageminimum)
 
-### z/OS systems  
+### z/OS systems
 
 When available, 1 MB pageable pages are the default size for the object heap and the code cache. Other page sizes are available for the object heap, depending on the system architecture as shown in the following table:
 
@@ -266,7 +266,7 @@ These extensions can listen for events and trigger any necessary adjustments to 
 
 ```
 –Xms1g –Xsoftmx2g –Xmx8g
-```  
+```
 
 This command-line string sets an initial heap size of 1 GB, a *soft* (adjustable) maximum heap size of 2 GB, and a maximum heap size of 8 GB. You can then use the `MemoryMXBean` API to dynamically respond to changes in memory resources. The following classes can be used:
 

@@ -34,7 +34,7 @@ The command syntax is as follows:
 
 Where:
 
-- The available `<options>` are:    
+- The available `<options>` are:
     - `-J`: supplies arguments to the Java VM that is running the `jcmd` command. You can use multiple `-J` options, for example: `jcmd -J-Xmx10m -J-Dcom.ibm.tools.attach.enable=yes`
     - `-h`: prints the `jcmd` help
 

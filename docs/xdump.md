@@ -49,7 +49,7 @@ The following table lists the help options for `-Xdump`, which provide usage and
 | `-Xdump:<agent>:help`        | Displays dump agent usage information.                                                                                                                      |
 
 
-The following options can be used to control the production of diagnostic data:  
+The following options can be used to control the production of diagnostic data:
 
 | Parameter                    | Result                                                                                                                                                      |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -195,7 +195,7 @@ You can use tokens to add context to dump file names and directories, and to pas
 | %home | Java home directory                                                                                                           |
 | %last | Last dump                                                                                                                     |
 | %pid  | Process ID                                                                                                                    |
-| %seq  | Dump counter                                                                                                                  |   
+| %seq  | Dump counter                                                                                                                  |
 | %tick | msec counter                                                                                                                  |
 | %uid  | User name                                                                                                                     |
 
@@ -618,7 +618,7 @@ The heap dump agent uses this suboption to specify the type of file to produce. 
 You can specify a PHD heap dump file (PHD), a classic text heap dump file (CLASSIC), or both. The default is a PHD file. For example:
 
 ```
--Xdump:heap:opts=PHD  
+-Xdump:heap:opts=PHD
 -Xdump:heap:opts=CLASSIC
 -Xdump:heap:opts=PHD+CLASSIC
 ```

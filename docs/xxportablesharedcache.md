@@ -33,7 +33,7 @@ This option, when enabled, increases the portability of AOT-compiled code, in th
 - The code is generated to be portable across OpenJ9 VMs that use compressed references and have a heap size of 1 MB to 28 GB (previously, AOT-compiled code could not be shared between VMs that use compressed references and that have different heap sizes). This feature might introduce a small (1-2%) steady-state throughput penalty when compressed references are used and the heap size is between 1 MB and 3 GB.
 
 This feature is particularly relevant for packaging a shared classes cache into a container image (for example, applications deployed on the cloud in the form of Docker containers) due to the following reasons:
-- The processor on which the container image is built is likely to be different from the processor on which the container is deployed. 
+- The processor on which the container image is built is likely to be different from the processor on which the container is deployed.
 - In a multi-layered container image where the shared classes cache is multi-layered as well, the AOT-compiled code in shared classes cache will likely come from multiple OpenJ9 VMs with different heap size requirements.
 
 ## Syntax

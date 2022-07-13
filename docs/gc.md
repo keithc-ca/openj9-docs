@@ -31,7 +31,7 @@ Different policies require a Java heap that is configured in different ways in o
 
 A GC cycle is a repeatable process that involves a set of GC operations. These operations process all or parts of the Java heap to complete a discrete function and are discussed in more detail in [GC operations](gc_overview.md#gc-operations).
 
-GC policies use different GC cycles to manage different aspects of the heap. For example, the `gencon` policy runs a partial GC cycle on the *nursery* area of the heap to complete a *scavenge* operation. At other times, `gencon` also runs a global GC cycle on the entire Java heap to complete *mark* and *sweep* (and optionally *compact*) operations.  
+GC policies use different GC cycles to manage different aspects of the heap. For example, the `gencon` policy runs a partial GC cycle on the *nursery* area of the heap to complete a *scavenge* operation. At other times, `gencon` also runs a global GC cycle on the entire Java heap to complete *mark* and *sweep* (and optionally *compact*) operations.
 
 GC cycles might be divided into increments that run over a period of time to reduce maximum pause times. These increments might involve *stop-the-world* (STW) pauses that must halt application threads to give certain GC operations exclusive access to the Java heap. Alternatively, increments might include GC operations that can run concurrently with application processing.
 
@@ -219,10 +219,10 @@ This policy is not suited to the majority of Java applications. However, the fol
 
     - Similarly, when memory application is well understood or where there is rarely memory to be reclaimed, you might prefer to avoid unnecessary GC cycles and rely on a failover mechanism to occasionally restart the VM.
 
-:fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Note:** You should be especially careful when using any of the following techniques with `nogc` because memory is never released under this policy:  
+:fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Note:** You should be especially careful when using any of the following techniques with `nogc` because memory is never released under this policy:
 
-- Finalization  
-- Direct memory access  
+- Finalization
+- Direct memory access
 - Weak, soft, and phantom references
 
 ## Troubleshooting

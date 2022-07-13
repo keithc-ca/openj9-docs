@@ -22,7 +22,7 @@
 * Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
 -->
 
-# -Xscdmx 
+# -Xscdmx
 
 Use the `-Xscdmx` option to control the size of the class debug area when you create a shared classes cache.
 

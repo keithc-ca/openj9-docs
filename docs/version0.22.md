@@ -78,7 +78,7 @@ The following features are supported by OpenJ9:
 
 The following features are implemented in OpenJDK and available in any builds of OpenJDK 14 with OpenJ9:
 
-- [JEP 339](https://openjdk.org/jeps/339): Edwards-Curve Digital Signature Algorithm (EdDSA) 
+- [JEP 339](https://openjdk.org/jeps/339): Edwards-Curve Digital Signature Algorithm (EdDSA)
 - [JEP 372](https://openjdk.org/jeps/372): Remove the Nashorn JavaScript Engine
 - [JEP 373](https://openjdk.org/jeps/373): Reimplement the Legacy DatagramSocket API
 - [JEP 375](https://openjdk.org/jeps/375): Pattern Matching for instanceof (Second Preview)

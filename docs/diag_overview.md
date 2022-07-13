@@ -24,17 +24,17 @@
 
 # Diagnostic data and tooling
 
-OpenJ9 contains a broad range of diagnostic capabilities to help identify, isolate, and solve run time problems. These capabilities include dump files, verbose logs, and trace files, which are supported by a variety of diagnostic tools and interfaces.  
+OpenJ9 contains a broad range of diagnostic capabilities to help identify, isolate, and solve run time problems. These capabilities include dump files, verbose logs, and trace files, which are supported by a variety of diagnostic tools and interfaces.
 
 ## Dumps
 
 Various types of dumps are produced by default in response to certain events, such as a GPF fault or an `OutOfMemoryError` exception. You can also trigger the production of dumps by using the `com.ibm.jvm.Dump` API or by specifying `-Xdump` options on the command line.
 
-All dumps are produced by dump agents, which are initialized when the OpenJ9 VM starts. Different dumps target different areas of the runtime environment. If you want to generate a dump to diagnose a particular type of problem, you need to understand what data the dump will provide. The following dumps are typically used for problem diagnosis:   
+All dumps are produced by dump agents, which are initialized when the OpenJ9 VM starts. Different dumps target different areas of the runtime environment. If you want to generate a dump to diagnose a particular type of problem, you need to understand what data the dump will provide. The following dumps are typically used for problem diagnosis:
 
 - [Java dumps](dump_javadump.md) (`-Xdump:java`) contain information that relates to the OpenJ9 VM and the Java&trade; application, such as the operating environment, locks, threads, hooks, shared classes, and class loaders.
 - [Heap dumps](dump_heapdump.md) (`-Xdump:heap`) show the content of the Java heap.
-- [System dumps](dump_systemdump.md) (`-Xdump:system`) contain a raw process image or address space of an application.  
+- [System dumps](dump_systemdump.md) (`-Xdump:system`) contain a raw process image or address space of an application.
 
 Other types of dump include binary JIT dumps, stack dumps, and snap dumps. For a complete list of dump agents and the diagnostic data they produce, see [Dump agents](xdump.md#dump-agents).
 
@@ -42,7 +42,7 @@ Other types of dump include binary JIT dumps, stack dumps, and snap dumps. For a
 
 Some components of OpenJ9 can also produce verbose output or log files to assist with problem determination.
 
-- Class data sharing provides a number of `-Xshareclasses` suboptions to provide detailed data about the content of a shared classes cache, cache I/O activity, and information about the Java Helper API (where used). For example, the `-Xshareclasses:printAllStats` suboption lists every class in chronological order with a reference to the location from which it was loaded. For more information, see [-Xshareclasses](xshareclasses.md).   
+- Class data sharing provides a number of `-Xshareclasses` suboptions to provide detailed data about the content of a shared classes cache, cache I/O activity, and information about the Java Helper API (where used). For example, the `-Xshareclasses:printAllStats` suboption lists every class in chronological order with a reference to the location from which it was loaded. For more information, see [-Xshareclasses](xshareclasses.md).
 
 - Garbage collection operations can be analyzed by producing verbose output from the `-verbose:gc` standard option. This output can be redirected to a file by specifying the `-Xverbosegclog` option. Information can be obtained about GC initialization, *stop-the-world* processing, finalization, reference processing, and allocation failures. Even more granular information can be obtained with the [-Xtgc](xtgc.md) option. For more information, see [verbose GC logs](vgclog.md).
 
@@ -86,7 +86,7 @@ For more information, see [Option builder](tool_builder.md).
 ### HotSpot-compatible tools
 
 A number of tools are available for compatibility with the reference implementation. These tools are independently implemented by
-OpenJ9 but have similar functions, allowing users to migrate more easily. The available tools are listed in the Tools section.  
+OpenJ9 but have similar functions, allowing users to migrate more easily. The available tools are listed in the Tools section.
 
 :fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Note:** If you are already familiar with tools that are provided with HotSpot, see [Switching to OpenJ9](tool_migration.md), which explains some of the differences you might encounter when using OpenJ9.
 

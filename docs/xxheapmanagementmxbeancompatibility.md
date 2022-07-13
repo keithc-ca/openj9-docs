@@ -48,7 +48,7 @@ The additional information that is available from the MXBean interface for later
 | **gencon**                       | nursery-allocate, nursery-survivor, tenured-LOA, tenured-SOA, tenured  | scavenge, global                   |
 | **optthruput** or **optavgpause**| tenured-LOA, tenured-SOA, tenured                                      | global                             |
 | **balanced**                     | balanced-reserved, balanced-eden, balanced-survivor, balanced-old      | partial gc, global garbage collect |
-| **metronome**                    | JavaHeap                                                               | global                             |                    
+| **metronome**                    | JavaHeap                                                               | global                             |
 
 The `MemoryPoolMXBean` API reports values for 4 detailed memory pools instead of a single value for the overall Java&trade; heap. In some cases the total sum of the 4 pools is more than the maximum heap size. This irregularity can be caused if data for each pool is collected between garbage collection cycles, where objects have been moved or reclaimed. If you want to collect memory usage data that is synchronized across the memory pools, use the `GarbageCollectionNotificationInfo` or `GarbageCollectorMXBean.getLastGcInfo` extensions.
 

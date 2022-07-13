@@ -39,7 +39,7 @@ This option affects the handling of the operating system signal `SIGABRT`. This 
 
 ## Explanation
 
-When enabled, the VM handles the signal `SIGABRT` and generates the various dump files. 
+When enabled, the VM handles the signal `SIGABRT` and generates the various dump files.
 
 When the option is disabled, the VM does not handle the signal `SIGABRT`. Generally, this signal is handled by the default operating system handler.
 

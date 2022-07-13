@@ -39,7 +39,7 @@ If you do not specify a VMID, the command reads input from `stdin`. You can ther
 
 IDs of dead processes are silently ignored.
 
-On its own, `jmap` prints help information. To obtain memory information, a `-histo` argument must be supplied, where the available `<options>` are as follows:    
+On its own, `jmap` prints help information. To obtain memory information, a `-histo` argument must be supplied, where the available `<options>` are as follows:
 
 
 - `-histo`: Prints statistics about classes on the heap, including the number of objects and their aggregate size

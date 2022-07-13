@@ -31,7 +31,7 @@ This Oracle HotSpot property is used for loading a JIT compiler from a named, na
         -Djava.compiler=j9jit29
 
 
-<!-- OLD: 
+<!-- OLD:
 ## Explanation
 
 Enable JIT compilation by setting to `j9jit<vm_version>`, where `<vm_version>` is the version of the J9 virtual machine. Use only digits, for example "29" for VM version 2.9. Check the output of the `java -version` command to confirm your VM level. (Equivalent to `–Xjit`).-->

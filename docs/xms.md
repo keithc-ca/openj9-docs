@@ -36,8 +36,8 @@ These Oracle&reg; HotSpot&trade; options set the initial/minimum Java&trade; hea
 
 For the `gencon` GC policy, you can also use the [`-Xmo`](xmo.md) option:
 
-- If the scavenger is enabled, `-Xms` &ge; `-Xmn` + `-Xmo`  
-- If the scavenger is disabled, `-Xms` &ge; `-Xmo`  
+- If the scavenger is enabled, `-Xms` &ge; `-Xmn` + `-Xmo`
+- If the scavenger is disabled, `-Xms` &ge; `-Xmo`
 
 ## Syntax
 
@@ -46,7 +46,7 @@ For the `gencon` GC policy, you can also use the [`-Xmo`](xmo.md) option:
 | `-Xms<size>`  | Set initial heap size   | 8 MB                                    |
 | `-Xmx<size>`  | Set maximum heap size   | 25% of available memory (25 GB maximum) |
 
-See [Using -X command-line options](x_jvm_commands.md) for more information about the `<size>` parameter.  
+See [Using -X command-line options](x_jvm_commands.md) for more information about the `<size>` parameter.
 See [Default settings for the OpenJ9 VM](openj9_defaults.md) for more about default values.
 
 The `-Xmx` option can be used with all OpenJ9 GC policies. However, the `-Xms` option can be used with all GC policies except for the `metronome` GC policy because the heap is always fully expanded.

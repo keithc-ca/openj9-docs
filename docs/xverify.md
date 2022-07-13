@@ -26,7 +26,7 @@
 
 As described in the [Oracle documentation](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html), this HotSpot option enables or disables the verifier. For compatibility, this option is also supported by the OpenJ9 VM.
 
-## Syntax 
+## Syntax
 
 | Setting           | Effect | Default |
 |-------------------|--------|:-------:|

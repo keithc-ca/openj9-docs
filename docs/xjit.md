@@ -31,11 +31,11 @@ Specifying `-Xjit` with no parameters has no effect because the JIT compiler is 
 
 Specifying `-Xnojit` turns off the JIT compiler but does not affect the AOT compiler.
 
-Specify the `-Xjit` option only once. If you specify this option multiple times, only the last option takes effect. 
+Specify the `-Xjit` option only once. If you specify this option multiple times, only the last option takes effect.
 
-You can specify multiple parameters for the `-Xjit` option by using commas to separate the parameters. For example: 
+You can specify multiple parameters for the `-Xjit` option by using commas to separate the parameters. For example:
 
-````-Xjit:enableGPU,exclude={ilog/rules/engine/sequential/generated/*}```` 
+````-Xjit:enableGPU,exclude={ilog/rules/engine/sequential/generated/*}````
 
 Parameters such as `exclude` are additive so you can specify them multiple times within the same `-Xjit` option.
 
@@ -94,10 +94,10 @@ These parameters can be used to modify the behavior of `-Xjit`:
 
 : Excludes the specified method from compilation.
 
-    `<method_name>` is the method or methods that are to be excluded; the wildcard `*` may be used. Specify as much of the full package, class and method as necessary. 
-    
-    For example, `-Xjit:exclude={test/sample/MyClass.testMethod()V}` excludes the single method specified.  
-    However, `-Xjit:exclude={test/sample/MyClass.testMethod()*}` excludes the method regardless of return type.  
+    `<method_name>` is the method or methods that are to be excluded; the wildcard `*` may be used. Specify as much of the full package, class and method as necessary.
+
+    For example, `-Xjit:exclude={test/sample/MyClass.testMethod()V}` excludes the single method specified.
+    However, `-Xjit:exclude={test/sample/MyClass.testMethod()*}` excludes the method regardless of return type.
     Similarly, `-Xjit:exclude={*}` excludes _all_ methods.
 
 : :fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Note:** `exclude` has the same effect regardless of whether it is specified on [`-Xaot`](xaot.md) or `-Xjit`. In consequence, if you specify `-Xjit:exclude`, AOT compilation is also prevented and the methods specified are always interpreted.

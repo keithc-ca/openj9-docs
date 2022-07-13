@@ -172,9 +172,9 @@ The following options are specific to the `metronome` GC policy:
 
 : This policy handles only memory allocation and heap expansion, but doesn't reclaim any memory. If the available Java heap becomes exhausted, an `OutOfMemoryError` exception is triggered and the VM stops.
 
-    You should be especially careful when using any of the following techniques with `nogc` because memory is never released under this policy:  
-    - Finalization  
-    - Direct memory access  
+    You should be especially careful when using any of the following techniques with `nogc` because memory is never released under this policy:
+    - Finalization
+    - Direct memory access
     - Weak, soft, and phantom references
 
 : To learn when to use this policy, see [Garbage collection: `nogc` policy](gc.md#nogc-policy).

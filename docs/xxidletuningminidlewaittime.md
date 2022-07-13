@@ -38,7 +38,7 @@ When the OpenJ9 VM is idle, this option controls the minimum length of time that
 |-------------|------------------|-----------|----------------------------------------------|
 |`<secs>`     | *[0 or greater]* |    0      |                   180                        |
 
-The value used for `<secs>` specifies the minimum length of time in seconds that the VM is idle before the state is set to idle. Idle tuning is enabled by default when the OpenJ9 VM is running in a docker container and the VM is detected as idle for 180 seconds. 
+The value used for `<secs>` specifies the minimum length of time in seconds that the VM is idle before the state is set to idle. Idle tuning is enabled by default when the OpenJ9 VM is running in a docker container and the VM is detected as idle for 180 seconds.
 
 Setting the value to 0 disables this feature, which causes the following idle tuning options to have no effect:
 

@@ -40,7 +40,7 @@ You can use the `-verbose:sizes` option to find out the values that the VM is cu
 | `-Xss<size>`  | Set maximum Java thread stack size   | 320 KB (31/32-bit); 1024 KB (64-bit) |
 | `-Xssi<size>` | Set Java thread stack size increment | 16 KB                                |
 
-See [Using -X command-line options](x_jvm_commands.md) for more information about the `<size>` parameter.  
+See [Using -X command-line options](x_jvm_commands.md) for more information about the `<size>` parameter.
 
 See [Default settings for the OpenJ9 VM](openj9_defaults.md) for more about default values.
 

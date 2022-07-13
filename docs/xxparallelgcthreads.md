@@ -34,7 +34,7 @@ This option enforces the thread count and cannot be used with the [`-XX:+Adaptiv
 
         -XX:ParallelGCThreads=<number>
 
-Where `<number>` is the number of threads that are used for parallel operations. 
+Where `<number>` is the number of threads that are used for parallel operations.
 
 Within OpenJ9 this option is directly mapped to [`-Xgcthreads`](xgcthreads.md).
 

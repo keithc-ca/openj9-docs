@@ -62,7 +62,7 @@ API documentation that applies to OpenJ9 can now be found in this user documenta
 
 ### New `-XX:[+|-]HandleSIGABRT` option added
 
-This option affects the handling of the operating system signal `SIGABRT`. For compatibility with the reference implementation, set `-XX:-HandleSIGABRT`. For more information, see [`-XX:[+|-]HandleSIGABRT`](xxhandlesigabrt.md). 
+This option affects the handling of the operating system signal `SIGABRT`. For compatibility with the reference implementation, set `-XX:-HandleSIGABRT`. For more information, see [`-XX:[+|-]HandleSIGABRT`](xxhandlesigabrt.md).
 
 ### New `-XX:[+|-]PrintFlagsFinal` option added
 

@@ -30,7 +30,7 @@ This option specifies the maximum number of threads that can be used during para
 
         -XX:ParallelGCMaxThreads=<number>
 
-Where `<number>` is the maximum number of threads that can be used for parallel operations. 
+Where `<number>` is the maximum number of threads that can be used for parallel operations.
 
 This option is directly mapped to [`-Xgcmaxthreads`](xgcmaxthreads.md).
 

@@ -32,7 +32,7 @@ Sets the minimum and maximum proportion of time to spend in the garbage collecti
 
 :fontawesome-solid-exclamation-triangle:{: .warn aria-hidden="true"} **Restrictions:**
 
-- This option applies only to GC policies that include stop-the-world (STW) operations, such as `-Xgcpolicy:optthruput`.  
+- This option applies only to GC policies that include stop-the-world (STW) operations, such as `-Xgcpolicy:optthruput`.
 
 
 ## Syntax

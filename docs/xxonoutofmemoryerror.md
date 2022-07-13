@@ -44,7 +44,7 @@ The `-XX:OnOutOfMemoryError` option is equivalent to the following `-Xdump` opti
 
 `-Xdump:tool:events=systhrow,filter=java/lang/OutOfMemoryError,exec=<command_string>`
 
-For more information, see [`-Xdump`](xdump.md).  
+For more information, see [`-Xdump`](xdump.md).
 
 
 <!-- ==== END OF TOPIC ==== xxonoutofmemoryerror.md ==== -->

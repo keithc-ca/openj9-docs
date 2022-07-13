@@ -26,7 +26,7 @@
 
 OpenJ9 VM tracing is a powerful feature to help you diagnose problems with minimal effect on performance. Tracing is enabled by default, together with a small set of trace points going to memory buffers. You can enable tracepoints at run time by using levels, components, group names, or individual tracepoint identifiers to trace VM internal operations and instrumented Java&trade; applications. You can also trace Java methods. See the [About trace](#about-trace) section that follows for more detail.
 
-Trace data can be output in human-readable or in compressed binary formats. The VM provides a tool to process and convert the compressed binary data into a readable format. See [Trace formatter](tool_traceformat.md).  
+Trace data can be output in human-readable or in compressed binary formats. The VM provides a tool to process and convert the compressed binary data into a readable format. See [Trace formatter](tool_traceformat.md).
 
 :fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Note:** You can also control trace by using the `com.ibm.jvm.Trace` API or by using JVMTI from an external agent.
 
@@ -113,7 +113,7 @@ yyyymmdd.hhmmssth.process.trc`.
 
 You must also think carefully about which components need to be traced and what level of tracing is required. For example, if you are tracing a suspected shared classes problem, it might be enough to trace all components at level 1, and **j9shr** at level 9, while `maximal` can be used to show parameters and other information for the failing component. Tracepoint components and trace levels are described in the following sections: [Tracepoint specification](#tracepoint-specification) and [Trace levels](#trace-levels).
 
-There are two types of tracepoints inside the VM:  
+There are two types of tracepoints inside the VM:
 
 - Regular tracepoints include method tracepoints, application tracepoints, data tracepoints inside the VM and data tracepoints inside class libraries. You can display regular tracepoint data on the screen or save the data to a file. You can also use command line options to trigger specific actions when regular tracepoints fire.
 - Auxiliary tracepoints are a special type of tracepoint that can be fired only when another tracepoint is being processed. For example, the stack frame information produced by the jstacktrace `-Xtrace:trigger` command. You cannot control where auxiliary tracepoint data is sent and you cannot set triggers on auxiliary tracepoints. Auxiliary tracepoint data is sent to the same destination as the tracepoint that caused them to be generated.
@@ -187,15 +187,15 @@ The options that control which individual tracepoints are activated at run time 
 <!--
 The following options control which individual tracepoints are activated at run time and the implicit destination of the trace data. (Follow links for more information about individual options.)
 
-- [`-Xtrace:maximal=<tracepoint_specification>`](#maximal)          
-- [`-Xtrace:minimal=<tracepoint_specification>`](#minimal)          
-- [`-Xtrace:count=<tracepoint_specification>`](#count)              
-- [`-Xtrace:print=<tracepoint_specification>`](#print)              
-- [`-Xtrace:iprint=<tracepoint_specification>`](#iprint)            
-- [`-Xtrace:exception=<tracepoint_specification>`](#exception)      
+- [`-Xtrace:maximal=<tracepoint_specification>`](#maximal)
+- [`-Xtrace:minimal=<tracepoint_specification>`](#minimal)
+- [`-Xtrace:count=<tracepoint_specification>`](#count)
+- [`-Xtrace:print=<tracepoint_specification>`](#print)
+- [`-Xtrace:iprint=<tracepoint_specification>`](#iprint)
+- [`-Xtrace:exception=<tracepoint_specification>`](#exception)
 - [`-Xtrace:exception.output=<filename>[,<size>]`](#exceptionoutput)
-- [`-Xtrace:external<tracepoint_specification>`](#external)         
-- [`-Xtrace:none[=<tracepoint_specification>]`](#none)              
+- [`-Xtrace:external<tracepoint_specification>`](#external)
+- [`-Xtrace:none[=<tracepoint_specification>]`](#none)
 
 -->
 In some cases, you must use them with other options. For example, if you specify `maximal` or `minimal` tracepoints, the trace data is put into memory buffers. If you are going to send the data to a file, you must use an `output` option to specify the destination file name.
@@ -372,7 +372,7 @@ To limit each thread to 2 trace buffers, each of 128 KB:
 
 ### `count` (tracepoint)
 
-    -Xtrace:count=<tracepoint_specification>             
+    -Xtrace:count=<tracepoint_specification>
 
 For further information about `<tracepoint_specification>` syntax, see [Tracepoint specification](#tracepoint-specification).
 
@@ -450,7 +450,7 @@ Displays general trace help
 
 ### `iprint` (tracepoint)
 
-    -Xtrace:iprint=<tracepoint_specification>          
+    -Xtrace:iprint=<tracepoint_specification>
 
 For further information about `<tracepoint_specification>` syntax, see [Tracepoint specification](#tracepoint-specification).
 
@@ -458,7 +458,7 @@ The `iprint` option is the same as the `print` option, but uses indenting to for
 
 ### `maximal` (tracepoint)
 
-    -Xtrace:maximal=<tracepoint_specification>         
+    -Xtrace:maximal=<tracepoint_specification>
 
 For further information about `<tracepoint_specification>` syntax, see [Tracepoint specification](#tracepoint-specification).
 
@@ -589,7 +589,7 @@ The output lines comprise of:
 
 ### `minimal` (tracepoint)
 
-    -Xtrace:minimal=<tracepoint_specification>          
+    -Xtrace:minimal=<tracepoint_specification>
 
 For further information about `<tracepoint_specification>` syntax, see [Tracepoint specification](#tracepoint-specification).
 
@@ -612,7 +612,7 @@ If you specify other tracepoints without specifying `-Xtrace:none`, the tracepoi
 Sends trace data to a file, optionally of a specific size and number of generations.
 
 
-    -Xtrace:output=<filename>[,<size>[,<generations>]]`   
+    -Xtrace:output=<filename>[,<size>[,<generations>]]`
 
 Where:
 
@@ -652,7 +652,7 @@ Trace output goes to a file whose name contains the time in *hhmmss* format (for
 
 ### `print` (tracepoint)
 
-    -Xtrace:print=<tracepoint_specification>            
+    -Xtrace:print=<tracepoint_specification>
 
 For further information about `<tracepoint_specification>` syntax, see [Tracepoint specification](#tracepoint-specification).
 

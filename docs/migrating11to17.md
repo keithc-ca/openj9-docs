@@ -22,7 +22,6 @@
 * Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
 -->
 
-
 # Migrating from Java 11 to Java 17
 
 Support for OpenJDK 17 was added in OpenJ9 version 0.29.1.

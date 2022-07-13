@@ -210,17 +210,17 @@ You can get the OS thread ID by using the `GetOSThreadID()` API:
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success  
-`JVMTI_ERROR_NULL_POINTER`: The `threadid_ptr` parameter is null.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.  
-`JVMTI_ERROR_INVALID_THREAD`: The thread is not valid.  
-`JVMTI_ERROR_THREAD_NOT_ALIVE`: The VM state of the thread is not started or has died.  
+`JVMTI_ERROR_NONE`: Success
+`JVMTI_ERROR_NULL_POINTER`: The `threadid_ptr` parameter is null.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.
+`JVMTI_ERROR_INVALID_THREAD`: The thread is not valid.
+`JVMTI_ERROR_THREAD_NOT_ALIVE`: The VM state of the thread is not started or has died.
 `JVMTI_ERROR_UNATTACHED_THREAD`: The current thread is not attached to the VM.
 `JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI start or live phase.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.GetOSThreadID`  
+JVMTI Extension Function identifier: `com.ibm.GetOSThreadID`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_GET_OS_THREAD_ID`
 
 ---
@@ -247,17 +247,17 @@ This extension returns a set of dump option specifications as ASCII strings. The
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success  
-`JVMTI_ERROR_NULL_POINTER`: The `options_buffer` or `data_size_ptr` parameters are null.  
-`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.  
-`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.  
-`JVMTI_ERROR_NOT_AVAILABLE`: The dump configuration is locked because a dump is in progress.  
+`JVMTI_ERROR_NONE`: Success
+`JVMTI_ERROR_NULL_POINTER`: The `options_buffer` or `data_size_ptr` parameters are null.
+`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.
+`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.
+`JVMTI_ERROR_NOT_AVAILABLE`: The dump configuration is locked because a dump is in progress.
 `JVMTI_ERROR_ILLEGAL_ARGUMENT`: The supplied memory buffer in `options_buffer` is too small.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.QueryVmDump`  
+JVMTI Extension Function identifier: `com.ibm.QueryVmDump`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_QUERY_VM_DUMP`
 
 ---
@@ -277,22 +277,22 @@ When dumps are in progress, the dump configuration is locked, and calls to `SetV
 **Parameters**
 
 - `jvmti_env`: A pointer to the JVMTI environment.
-- `option`: The VM dump option string.  
+- `option`: The VM dump option string.
 :fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Note:** On z/OS, you might need to convert the option string from EBCDIC to ASCII before using this JVMTI extension function.
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success.  
-`JVMTI_ERROR_NULL_POINTER`: The parameter option is null.  
-`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.  
-`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.  
-`JVMTI_ERROR_NOT_AVAILABLE`: The dump configuration is locked because a dump is in progress.  
+`JVMTI_ERROR_NONE`: Success.
+`JVMTI_ERROR_NULL_POINTER`: The parameter option is null.
+`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.
+`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.
+`JVMTI_ERROR_NOT_AVAILABLE`: The dump configuration is locked because a dump is in progress.
 `JVMTI_ERROR_ILLEGAL_ARGUMENT`: The parameter option contains an invalid `-Xdump` string.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.SetVmDump`  
+JVMTI Extension Function identifier: `com.ibm.SetVmDump`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_SET_VM_DUMP`
 
 ---
@@ -310,31 +310,31 @@ Choose the type of dump required by specifying an ASCII string that contains one
 **Parameters**
 
 - `jvmti_env`: A pointer to the JVMTI environment.
-- `option`: A pointer to the dump type string, which can be one of the following types:  
+- `option`: A pointer to the dump type string, which can be one of the following types:
 
-    `stack`  
-    `java`  
-    `system`  
-    `console`  
-    `tool`  
-    `heap`  
-    `snap`  
-    `ceedump` (z/OS only)  
+    `stack`
+    `java`
+    `system`
+    `console`
+    `tool`
+    `heap`
+    `snap`
+    `ceedump` (z/OS only)
 
     :fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Note:** On z/OS, you might need to convert the option string from EBCDIC to ASCII before using this JVMTI extension function.
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success.  
-`JVMTI_ERROR_NULL_POINTER`: The option parameter is null.  
-`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.  
-`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.  
+`JVMTI_ERROR_NONE`: Success.
+`JVMTI_ERROR_NULL_POINTER`: The option parameter is null.
+`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.
+`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.
 `JVMTI_ERROR_NOT_AVAILABLE`: The dump configuration is locked because a dump is in progress.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.TriggerVmDump`  
+JVMTI Extension Function identifier: `com.ibm.TriggerVmDump`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_TRIGGER_VM_DUMP`
 
 ---
@@ -353,15 +353,15 @@ You can reset VM dump options to the values at VM initialization by using the `R
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success.  
-`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.  
-`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.  
+`JVMTI_ERROR_NONE`: Success.
+`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.
+`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.
 `JVMTI_ERROR_NOT_AVAILABLE`: The dump configuration is locked because a dump is in progress.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.ResetVmDump`  
+JVMTI Extension Function identifier: `com.ibm.ResetVmDump`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_RESET_VM_DUMP`
 
 ---
@@ -406,11 +406,11 @@ The event function provides the dump file name, the name of the JVMTI event, and
 
 **Parameters**
 
-- `jvmti_env`: JVMTI environment pointer.  
-- `jni_env`: JNI environment pointer for the thread on which the event occurred.  
-- `label`: The dump file name, including directory path.  
-- `event`: The extension event name `com.ibm.VmDumpEnd`.  
-- `detail`: The dump event detail string. The string can be empty.  
+- `jvmti_env`: JVMTI environment pointer.
+- `jni_env`: JNI environment pointer for the thread on which the event occurred.
+- `label`: The dump file name, including directory path.
+- `event`: The extension event name `com.ibm.VmDumpEnd`.
+- `detail`: The dump event detail string. The string can be empty.
 
 **Returns**
 
@@ -431,21 +431,21 @@ The trace option is passed in as an ASCII character string. Use the same syntax 
 **Parameters**
 
 - `jvmti_env`: JVMTI environment pointer.
-- `option`: Enter the VM trace option string.  
+- `option`: Enter the VM trace option string.
 :fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Note:** On z/OS, you might need to convert the option string from EBCDIC to ASCII before using this JVMTI extension function.
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success.  
-`JVMTI_ERROR_NULL_POINTER`: The option parameter is null.  
-`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.  
-`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.  
-`JVMTI_ERROR_ILLEGAL_ARGUMENT`: The option parameter contains an invalid `-Xtrace` string.  
+`JVMTI_ERROR_NONE`: Success.
+`JVMTI_ERROR_NULL_POINTER`: The option parameter is null.
+`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.
+`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.
+`JVMTI_ERROR_ILLEGAL_ARGUMENT`: The option parameter contains an invalid `-Xtrace` string.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.SetVmTrace`  
+JVMTI Extension Function identifier: `com.ibm.SetVmTrace`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_SET_VM_TRACE`
 
 ---
@@ -469,17 +469,17 @@ You can subscribe to VM tracepoints by using the `RegisterTracePointSubscriber()
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success.  
-`JVMTI_ERROR_NULL_POINTER`: One of the supplied parameters is null.  
-`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is not valid.  
-`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.  
-`JVMTI_ERROR_NOT_AVAILABLE`: VM trace is not available.  
-`JVMTI_ERROR_INTERNAL`: An internal error occurred.  
+`JVMTI_ERROR_NONE`: Success.
+`JVMTI_ERROR_NULL_POINTER`: One of the supplied parameters is null.
+`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is not valid.
+`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.
+`JVMTI_ERROR_NOT_AVAILABLE`: VM trace is not available.
+`JVMTI_ERROR_INTERNAL`: An internal error occurred.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.RegisterTracePointSubscriber`  
+JVMTI Extension Function identifier: `com.ibm.RegisterTracePointSubscriber`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_REGISTER_TRACEPOINT_SUBSCRIBER`
 
 #### `jvmtiTraceSubscriber` function
@@ -536,15 +536,15 @@ After the `DeregisterTracePointSubscriber()` API is called, no further calls are
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success.  
-`JVMTI_ERROR_NULL_POINTER`: The `subscription_id` parameter is null.  
-`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is not valid.  
-`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.  
+`JVMTI_ERROR_NONE`: Success.
+`JVMTI_ERROR_NULL_POINTER`: The `subscription_id` parameter is null.
+`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is not valid.
+`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.DeregisterTracePointSubscriber`  
+JVMTI Extension Function identifier: `com.ibm.DeregisterTracePointSubscriber`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_DEREGISTER_TRACEPOINT_SUBSCRIBER`
 
 ---
@@ -574,15 +574,15 @@ You can use the `GetMemoryCategories()` API to work out the buffer size you must
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success.  
-`JVMTI_ERROR_UNSUPPORTED_VERSION`: Unrecognized value passed for version.  
-`JVMTI_ERROR_ILLEGAL_ARGUMENT`: Illegal argument; `categories_buffer`, `count_ptr`, and `total_categories_ptr` all have null values.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `env` parameter is invalid.  
-`JVMTI_ERROR_OUT_OF_MEMORY`: Memory category data is truncated because `max_categories` is not large enough.  
+`JVMTI_ERROR_NONE`: Success.
+`JVMTI_ERROR_UNSUPPORTED_VERSION`: Unrecognized value passed for version.
+`JVMTI_ERROR_ILLEGAL_ARGUMENT`: Illegal argument; `categories_buffer`, `count_ptr`, and `total_categories_ptr` all have null values.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `env` parameter is invalid.
+`JVMTI_ERROR_OUT_OF_MEMORY`: Memory category data is truncated because `max_categories` is not large enough.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.GetMemoryCategories`  
+JVMTI Extension Function identifier: `com.ibm.GetMemoryCategories`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_GET_MEMORY_CATEGORIES`
 
 ---
@@ -599,22 +599,22 @@ This extension returns the current log options as an ASCII string. The syntax of
 
 **Parameters**
 
-- `jvmti_env`: A pointer to the JVMTI environment.  
-- `buffer_size`: The size of the supplied memory buffer in bytes. If the memory buffer is too small to contain the current VM log option string, the `JVMTI_ERROR_ILLEGAL_ARGUMENT` error message is returned.  
-- `options_buffer`: A pointer to the supplied memory buffer.  
+- `jvmti_env`: A pointer to the JVMTI environment.
+- `buffer_size`: The size of the supplied memory buffer in bytes. If the memory buffer is too small to contain the current VM log option string, the `JVMTI_ERROR_ILLEGAL_ARGUMENT` error message is returned.
+- `options_buffer`: A pointer to the supplied memory buffer.
 - `data_size_ptr`: A pointer to a variable, used to return the total size of the option string.
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success  
-`JVMTI_ERROR_NULL_POINTER`: The `options` or `data_size_ptr` parameters are null.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.  
-`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.  
+`JVMTI_ERROR_NONE`: Success
+`JVMTI_ERROR_NULL_POINTER`: The `options` or `data_size_ptr` parameters are null.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.
+`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.
 `JVMTI_ERROR_ILLEGAL_ARGUMENT`: The supplied memory buffer is too small.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.QueryVmLogOptions`  
+JVMTI Extension Function identifier: `com.ibm.QueryVmLogOptions`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_QUERY_VM_LOG_OPTIONS`
 
 ---
@@ -636,16 +636,16 @@ The log option is passed in as an ASCII character string. Use the same syntax as
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success.  
-`JVMTI_ERROR_NULL_POINTER`: The parameter option is null.  
-`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.  
-`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.  
+`JVMTI_ERROR_NONE`: Success.
+`JVMTI_ERROR_NULL_POINTER`: The parameter option is null.
+`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is invalid.
+`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.
 `JVMTI_ERROR_ILLEGAL_ARGUMENT`: The parameter option contains an invalid `-Xsyslog` string.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.SetVmLogOptions`  
+JVMTI Extension Function identifier: `com.ibm.SetVmLogOptions`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_SET_VM_LOG_OPTIONS`
 
 ---
@@ -676,25 +676,25 @@ Information about the caches is returned in a structure that is populated by a u
 - `flags`: Reserved for future use. The only value allowed is `COM_IBM_ITERATE_SHARED_CACHES_NO_FLAGS`.
 - `useCommandLineValues`: Set this value to `true` when you want to specify the cache directory on the command line. Set this value to `false` when you want to use the `cacheDir` parameter.
 - `callback`: A function pointer to a user provided callback routine `jvmtiIterateSharedCachesCallback`.
-- `user_data`: User supplied data, passed as an argument to the callback function.  
+- `user_data`: User supplied data, passed as an argument to the callback function.
 
         jint (JNICALL *jvmtiIterateSharedCachesCallback)(jvmtiEnv *env,jvmtiSharedCacheInfo *cache_info, void *user_data);
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success.  
-`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `env` parameter is not valid.  
-`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.  
-`JVMTI_ERROR_UNSUPPORTED_VERSION`: The `version` parameter is not valid.  
-`JVMTI_ERROR_NULL_POINTER`: The `callback` parameter is null.  
-`JVMTI_ERROR_NOT_AVAILABLE`: The shared classes feature is not enabled in the VM.  
-`JVMTI_ERROR_ILLEGAL_ARGUMENT`: The `flags` parameter is not valid.  
+`JVMTI_ERROR_NONE`: Success.
+`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `env` parameter is not valid.
+`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.
+`JVMTI_ERROR_UNSUPPORTED_VERSION`: The `version` parameter is not valid.
+`JVMTI_ERROR_NULL_POINTER`: The `callback` parameter is null.
+`JVMTI_ERROR_NOT_AVAILABLE`: The shared classes feature is not enabled in the VM.
+`JVMTI_ERROR_ILLEGAL_ARGUMENT`: The `flags` parameter is not valid.
 `JVMTI_ERROR_INTERNAL`: This error is returned when the `jvmtiIterateSharedCachesCallback` returns `JNI_ERR`.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.IterateSharedCaches`  
+JVMTI Extension Function identifier: `com.ibm.IterateSharedCaches`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_ITERATE_SHARED_CACHES`
 
 #### `jvmtiIterateSharedCachesCallback` function
@@ -707,7 +707,7 @@ Macro declaration in the `ibmjvmti.h` file: `COM_IBM_ITERATE_SHARED_CACHES`
 
     **Callback function returns**
 
-    `JNI_OK`: Continue iterating.  
+    `JNI_OK`: Continue iterating.
     `JNI_ERR`: Stop iterating, which causes `IterateSharedCaches` to return `JVMTI_ERROR_INTERNAL`
 
 #### `jvmtiSharedCacheInfo` structure
@@ -750,18 +750,18 @@ Macro declaration in the `ibmjvmti.h` file: `COM_IBM_ITERATE_SHARED_CACHES`
 
             COM_IBM_ITERATE_SHARED_CACHES_GET_ADDR_MODE(jvmtiSharedCacheInfo.addrMode)
 
-        This macro returns one of the following values:  
-            `COM_IBM_SHARED_CACHE_ADDRMODE_32`  
-            `COM_IBM_SHARED_CACHE_ADDRMODE_64`  
+        This macro returns one of the following values:
+            `COM_IBM_SHARED_CACHE_ADDRMODE_32`
+            `COM_IBM_SHARED_CACHE_ADDRMODE_64`
 
     : To get the compressed references mode, use:
 
             COM_IBM_ITERATE_SHARED_CACHES_GET_CMPRSSREF_MODE(jvmtiSharedCacheInfo.addrMode)
 
-        This macro returns one of the following values:  
-            `COM_IBM_ITERATE_SHARED_CACHES_UNKNOWN_COMPRESSED_POINTERS_MODE`  
-            `COM_IBM_ITERATE_SHARED_CACHES_COMPRESSED_POINTERS_MODE`  
-            `COM_IBM_ITERATE_SHARED_CACHES_NON_COMPRESSED_POINTERS_MODE`  
+        This macro returns one of the following values:
+            `COM_IBM_ITERATE_SHARED_CACHES_UNKNOWN_COMPRESSED_POINTERS_MODE`
+            `COM_IBM_ITERATE_SHARED_CACHES_COMPRESSED_POINTERS_MODE`
+            `COM_IBM_ITERATE_SHARED_CACHES_NON_COMPRESSED_POINTERS_MODE`
 
     - The field `softMaxBytes` is included when `COM_IBM_ITERATE_SHARED_CACHES_VERSION_4` or later is specified.
 
@@ -788,30 +788,30 @@ This extension removes a named shared classes cache of a given persistence type,
 - `env`: A pointer to the JVMTI environment.
 - `cacheDir`: When the value of `useCommandLineValues` is `false`, specify the absolute path of the directory for the shared classes cache. If the value is `null`, the platform-dependent default is used.
 - `cacheName`: When the value of `useCommandLineValues` is `false`, specify the name of the cache to be removed. If the value is `null`, the platform-dependent default is used.
-- `persistence`: When the value of `useCommandLineValues` is false, specify the type of cache to remove. This parameter must have one of the following values:  
-    `PERSISTENCE_DEFAULT` (The default value for the platform).  
-    `PERSISTENT`  
-    `NONPERSISTENT`  
+- `persistence`: When the value of `useCommandLineValues` is false, specify the type of cache to remove. This parameter must have one of the following values:
+    `PERSISTENCE_DEFAULT` (The default value for the platform).
+    `PERSISTENT`
+    `NONPERSISTENT`
 - `useCommandLineValues`: Set this value to `true` when you want to specify the shared classes cache name, persistence type, and directory on the command line. Set this value to `false` when you want to use the `cacheDir`, `persistence`, and `cacheName` parameters instead.
-- `internalErrorCode`: If not `null`, this value is set to one of the following constants when `JVMTI_ERROR_INTERNAL` is returned:  
+- `internalErrorCode`: If not `null`, this value is set to one of the following constants when `JVMTI_ERROR_INTERNAL` is returned:
     - `COM_IBM_DESTROYED_ALL_CACHE`: Set when `JVMTI_ERROR_NONE is` returned.
-    - `COM_IBM_DESTROYED_NONE`: Set when the function fails to remove any caches.  
-    - `COM_IBM_DESTROY_FAILED_CURRENT_GEN_CACHE`: Set when the function fails to remove the existing current generation cache, irrespective of the state of older generation caches.  
+    - `COM_IBM_DESTROYED_NONE`: Set when the function fails to remove any caches.
+    - `COM_IBM_DESTROY_FAILED_CURRENT_GEN_CACHE`: Set when the function fails to remove the existing current generation cache, irrespective of the state of older generation caches.
     - `COM_IBM_DESTROY_FAILED_OLDER_GEN_CACHE`: Set when the function fails to remove any older generation caches. The current generation cache does not exist or is successfully removed.
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success. No cache exists or all existing caches of all generations are removed.  
-`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `env` parameter is not valid.  
-`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.  
-`JVMTI_ERROR_NOT_AVAILABLE`: The shared classes feature is not enabled in the VM.  
+`JVMTI_ERROR_NONE`: Success. No cache exists or all existing caches of all generations are removed.
+`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `env` parameter is not valid.
+`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.
+`JVMTI_ERROR_NOT_AVAILABLE`: The shared classes feature is not enabled in the VM.
 `JVMTI_ERROR_ILLEGAL_ARGUMENT`: The `persistence` parameter is not valid.
 `JVMTI_ERROR_INTERNAL`: Failed to remove any existing cache with the given name. See the value of the `internalErrorCode` parameter for more information about the failure.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.DestroySharedCache`  
+JVMTI Extension Function identifier: `com.ibm.DestroySharedCache`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_DESTROY_SHARED_CACHE`
 
 ---
@@ -835,17 +835,17 @@ You can subscribe to verbose garbage collection (GC) data logging by using the `
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success.  
-`JVMTI_ERROR_NULL_POINTER`: One of the supplied parameters is null.  
-`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is not valid.  
-`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.  
-`JVMTI_ERROR_NOT_AVAILABLE`: GC verbose logging is not available.  
+`JVMTI_ERROR_NONE`: Success.
+`JVMTI_ERROR_NULL_POINTER`: One of the supplied parameters is null.
+`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is not valid.
+`JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.
+`JVMTI_ERROR_NOT_AVAILABLE`: GC verbose logging is not available.
 `JVMTI_ERROR_INTERNAL`: An internal error has occurred.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.RegisterVerboseGCSubscriber`  
+JVMTI Extension Function identifier: `com.ibm.RegisterVerboseGCSubscriber`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_REGISTER_VERBOSEGC_SUBSCRIBER`
 
 #### `jvmtiVerboseGCSubscriber` function
@@ -903,15 +903,15 @@ After the `DeregisterVerboseGCSubscriber()` API is called, no further calls are 
 
 **Returns**
 
-`JVMTI_ERROR_NONE`: Success.  
-`JVMTI_ERROR_NULL_POINTER`: The `subscription_id` parameter is null.  
-`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.  
-`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is not valid.  
+`JVMTI_ERROR_NONE`: Success.
+`JVMTI_ERROR_NULL_POINTER`: The `subscription_id` parameter is null.
+`JVMTI_ERROR_OUT_OF_MEMORY`: There is insufficient system memory to process the request.
+`JVMTI_ERROR_INVALID_ENVIRONMENT`: The `jvmti_env` parameter is not valid.
 `JVMTI_ERROR_WRONG_PHASE`: The extension has been called outside the JVMTI live phase.
 
 **Identifiers**
 
-JVMTI Extension Function identifier: `com.ibm.DeregisterVerboseGCSubscriber`  
+JVMTI Extension Function identifier: `com.ibm.DeregisterVerboseGCSubscriber`
 Macro declaration in the `ibmjvmti.h` file: `COM_IBM_DEREGISTER_VERBOSEGC_SUBSCRIBER`
 
 ---

@@ -22,16 +22,16 @@
 * Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
 -->
 
-# -Xmcrs 
+# -Xmcrs
 
 
 Sets an initial size for an area in memory that is reserved for any native classes, monitors, and threads that are used by compressed references within the lowest 4 GB memory area.
 
 You can use the `-verbose:sizes` option to find out the value that is being used by the VM.
 
-:fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Notes:** 
+:fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Notes:**
 
-- Native memory `OutOfMemoryError` exceptions might occur when using compressed references if the lowest 4 GB of address space becomes full, particularly when loading classes, starting threads, or using monitors. 
+- Native memory `OutOfMemoryError` exceptions might occur when using compressed references if the lowest 4 GB of address space becomes full, particularly when loading classes, starting threads, or using monitors.
 - If you are not using compressed references and this option is set, the option is ignored and the output of `-verbose:sizes` shows `-Xmcrs0`.
 
 

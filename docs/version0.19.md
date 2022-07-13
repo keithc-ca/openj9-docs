@@ -81,7 +81,7 @@ The following features are supported by OpenJ9:
 
 The following features are implemented in OpenJDK and available in any builds of OpenJDK 14 with OpenJ9:
 
-- [JEP 305](https://openjdk.org/jeps/305): Pattern Matching for instanceof (Preview) 
+- [JEP 305](https://openjdk.org/jeps/305): Pattern Matching for instanceof (Preview)
 - [JEP 361](https://openjdk.org/jeps/361): Switch Expressions (Standard)
 - [JEP 367](https://openjdk.org/jeps/367): Remove the Pack200 Tools and API
 - [JEP 368](https://openjdk.org/jeps/368): Text Blocks (Second Preview)

@@ -78,7 +78,7 @@ See [Using -X command-line options](x_jvm_commands.md) for more information abou
 
 : On z/OS systems, defines the type of memory to allocate for the Java object heap.
 
-    1 MB pageable large pages, when available, are the default size for the object heap.  
+    1 MB pageable large pages, when available, are the default size for the object heap.
 
     64-bit VMs support large page sizes of 1 MB nonpageable and 2 GB nonpageable with the following requirements:
 

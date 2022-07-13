@@ -65,7 +65,7 @@ This option specifies/unspecifies classes of objects that will be hashed and ext
 
 Heap resizing heuristics have been redesigned for balanced GC. This includes both total heap resizing including Eden and non-Eden components indenpendantly, and also balancing between these two components when heap is fully expanded. The heuristics now combine both CPU overhead (for both Partial GCs and Global Mark Phase) and heap occupancy criteria. The balancing between Eden and non-Eden for fully expanded heaps is far more dynamic (instead of being mostly fixed to ratio 1:4).
 
-As a consequence there should typically be less need for heap sizing tuning options, most notably for Eden sizing options [-Xmn/mns/mnx](xmn.md). 
+As a consequence there should typically be less need for heap sizing tuning options, most notably for Eden sizing options [-Xmn/mns/mnx](xmn.md).
 
 Also, a new soft limit pause target is added for Partial GCs, that defaults to 200ms. This criteria is combined with PGC CPU overhead critera for a balanced compromise between minimizing footprint, maximizing throughput and meeting the paused time target.
 
@@ -75,7 +75,7 @@ More details about the new heurstics can be found at:
 
 The heuristcs now obey existing options
 
-[-Xmint/-Xmaxt](xmint.md) and <br /> 
+[-Xmint/-Xmaxt](xmint.md) and <br />
 [-Xgc:dnssExpectedTimeRatioMaximum/Minimum](xgc.md#dnssexpectedtimeratiomaximum)
 
 previously used for optthruput/optavgpause/gencon GC policies and also

@@ -61,7 +61,7 @@ These cache utilities are discussed in more detail in the sections that follow.
 Class data sharing is enabled by default for bootstrap classes, unless your application is running in a container.
 Default behavior includes the following characteristics:
 
-- On Windows&reg;, the cache is created in the user's `C:\Users\<username>\AppData\Local\javasharedresources` directory. On z/OS&reg;, the default cache directory is `/tmp/javasharedresources`. On other systems, the cache is created in the `javasharedresources` directory in the users home directory, unless the `groupAccess` parameter is specified, in which case it is created in `/tmp/javasharedresources`. Please do not set the home directory on a NFS mount or shared mount across systems or LPARs. 
+- On Windows&reg;, the cache is created in the user's `C:\Users\<username>\AppData\Local\javasharedresources` directory. On z/OS&reg;, the default cache directory is `/tmp/javasharedresources`. On other systems, the cache is created in the `javasharedresources` directory in the users home directory, unless the `groupAccess` parameter is specified, in which case it is created in `/tmp/javasharedresources`. Please do not set the home directory on a NFS mount or shared mount across systems or LPARs.
 - The cache name is `sharedcc_%u`, where `%u` is the current user name.
 - If class data sharing fails, the VM still starts without printing any errors.
 
@@ -155,7 +155,7 @@ The [-Xshareclasses](xshareclasses.md) option is highly configurable, allowing y
 
     In most cases, setting this option allows your application to start even if there is a problem opening or creating the shared cache. The VM will continue to start *without* class data sharing.
 
-- Set a soft maximum size for the cache by specifying the [-Xscmx](xscmx.md) option with the [`-XXSharedCacheHardLimit`](xxsharedcachehardlimit.md) option.  
+- Set a soft maximum size for the cache by specifying the [-Xscmx](xscmx.md) option with the [`-XXSharedCacheHardLimit`](xxsharedcachehardlimit.md) option.
 
     For example, you might create a 64 MB shared cache and set a smaller value, such as 16 MB, for the `-Xscmx` option, to limit the data stored in the cache (`-XX:SharedCacheHardLimit=64m -Xscmx16m`). You can then adjust the soft maximum size by using the [`-Xshareclasses:adjustsoftmx`](xshareclasses.md#adjustsoftmx) cache utility or the  `MemoryMXBean.setSharedClassCacheSoftmxBytes()` method in the `com.ibm.lang.management` API. For more information, see [Setting a soft maximum size](xscmx.md#setting-a-soft-maximum-size).
 
@@ -193,7 +193,7 @@ The following example shows a Docker container with four layers:
         Cache name              level         cache-type      feature         layer       OS shmid       OS semid       last detach time
 
         Compatible shared caches
-        MyCache                 Java8 64-bit  persistent      cr              0                                         Mon Sep 23 11:41:04 2019   
+        MyCache                 Java8 64-bit  persistent      cr              0                                         Mon Sep 23 11:41:04 2019
         MyCache                 Java8 64-bit  persistent      cr              1                                         Mon Sep 23 11:46:25 2019
         MyCache                 Java8 64-bit  persistent      cr              2                                         In use
 
@@ -304,7 +304,7 @@ The following rules exist for classes that are redefined or retransformed by JVM
 
 - Redefined classes contain replacement bytecode that is provided by an agent at run time by using the JVMTI `RedefineClasses` or `Instrumentation.redefineClasses` function. A typical use case is for debugging, where function is added for log output. These classes are never stored in the cache.
 
-- Retransformed classes contain bytecode that can be changed without any reference to the original bytecode by using the JVMTI `RetransformClasses` or `Instrumentation.retransformClasses` functions. A typical use case is a profiling agent that adds or removes profiling calls with each retransformation. These classes can be modified multiple times and are not stored in the cache by default. If you want to store these modified classes for reuse, you can do so by setting the [`-Xshareclasses:cacheRetransformed`](xshareclasses.md#cacheretransformed) suboption when you start your application. This option turns off bytecode instrumentation support, forcing cache creation into [`-Xshareclasses:disableBCI`](xshareclasses.md#disablebci) mode.  
+- Retransformed classes contain bytecode that can be changed without any reference to the original bytecode by using the JVMTI `RetransformClasses` or `Instrumentation.retransformClasses` functions. A typical use case is a profiling agent that adds or removes profiling calls with each retransformation. These classes can be modified multiple times and are not stored in the cache by default. If you want to store these modified classes for reuse, you can do so by setting the [`-Xshareclasses:cacheRetransformed`](xshareclasses.md#cacheretransformed) suboption when you start your application. This option turns off bytecode instrumentation support, forcing cache creation into [`-Xshareclasses:disableBCI`](xshareclasses.md#disablebci) mode.
 
 ### Sharing modified bytecode
 

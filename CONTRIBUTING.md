@@ -280,10 +280,10 @@ If work is ongoing, or if there is further work to be done after you create your
 
 ### Previewing pull requests
 
-Pull requests must be previewed before merging. Stage your pull request (i.e. create a temporary draft of your changes) by triggering a Jenkins-ci job. To run the job, add the following trigger comment into a pull request:  
+Pull requests must be previewed before merging. Stage your pull request (i.e. create a temporary draft of your changes) by triggering a Jenkins-ci job. To run the job, add the following trigger comment into a pull request:
 ```
 Jenkins doc stage
-```  
+```
 Pull request builds are staged at the gh-pages branch of the https://github.com/eclipse-openj9/openj9-docs-staging repository. To view
 the staged draft of your documentation, visit the following URL, substituting &lt;PR&gt; with the number of your pull request:
 

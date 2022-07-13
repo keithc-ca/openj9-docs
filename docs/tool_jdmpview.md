@@ -79,7 +79,7 @@ For a list of commands, type "help"; for how to use "help", type "help help"
 
 If you run the `jdmpview` tool on a compressed file that contains multiple dumps, the tool detects and shows all the dump files, whether these are system dumps, Java dumps, or heap dumps. Because of this behavior, more than one context might be displayed when you start `jdmpview`. To switch context, type `context <n>`, where `<n>` is the context value for the dump you want to investigate.
 
-On z/OS, a system dump can contain multiple address spaces and an address space can contain multiple VM instances. In this case, the context allows you to select the address space and VM instance within the dump file. The following z/OS example shows address spaces (`ASID`), with two JVMs occupying address space `0x73` (context 5 and 6). The current context is 5 (`CTX:5>`), shown with an asterisk. To view the JVM in context 6, you can switch by specifying `context 6`.  
+On z/OS, a system dump can contain multiple address spaces and an address space can contain multiple VM instances. In this case, the context allows you to select the address space and VM instance within the dump file. The following z/OS example shows address spaces (`ASID`), with two JVMs occupying address space `0x73` (context 5 and 6). The current context is 5 (`CTX:5>`), shown with an asterisk. To view the JVM in context 6, you can switch by specifying `context 6`.
 
 ```
 CTX:5> context
@@ -250,7 +250,7 @@ Pattern rules:
 
     ```
     "[pattern1|pattern2|...|patternN]"
-    ```  
+    ```
 
     The initial and trailing double quotation marks and brackets ([ ]) are required. Use a vertical bar character to separate the sub-patterns. Quotation marks and the vertical bar are not allowed in a sub-pattern. Spaces are allowed in the middle of a sub-pattern, but leading and trailing spaces will be trimmed.
 
@@ -260,8 +260,8 @@ In the following example, the command displays the number of instances and total
 
     > info class | grep java/lang/String
     94 7688 [Ljava/lang/String;
-    1822 58304 java/lang/String               
-    1 16 java/lang/String$CaseInsensitiveComparator              
+    1822 58304 java/lang/String
+    1 16 java/lang/String$CaseInsensitiveComparator
     0 0 java/lang/String$UnsafeHelpers
 
 In the following example, the command uses two pipes in combination to display the number of instances and total heap size for the `java/lang/StringCoding.StringDecoder` class:

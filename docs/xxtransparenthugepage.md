@@ -33,6 +33,6 @@ If Transparent Huge Pages (THP) is set to `madvise` on your system, this option,
 | Setting                    | Effect  | Default                                                                                                  |
 |----------------------------|---------|--------------------------------------------------------------------------------------------------------|
 | `-XX:+TransparentHugePage` | Enable  | :fontawesome-solid-check:{: .yes aria-hidden="true"}<span class="sr-only">yes</span>            |
-| `-XX:-TransparentHugePage` | Disable |  |                                                                                    
+| `-XX:-TransparentHugePage` | Disable |  |
 
 <!-- ==== END OF TOPIC ==== xxtransparenthugepage.md ==== -->

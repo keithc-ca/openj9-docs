@@ -94,17 +94,17 @@ The first section of the log includes lines that start with `#INFO:`, which prov
 #INFO:       JIT Level  - e24e8aa9
 #INFO:       JVM Level  - 20180315_120
 #INFO:       GC Level   - e24e8aa9
-#INFO:  
+#INFO:
 #INFO:  Processor Information:
 #INFO:       Platform Info:X86 Intel P6
 #INFO:       Vendor:GenuineIntel
 #INFO:       numProc=1
-#INFO:  
+#INFO:
 #INFO:  _______________________________________
 #INFO:  AOT
 #INFO:  options specified:
 #INFO:       samplingFrequency=2
-#INFO:  
+#INFO:
 #INFO:  options in effect:
 #INFO:       verbose=1
 #INFO:       vlog=vlogfile
@@ -114,7 +114,7 @@ The first section of the log includes lines that start with `#INFO:`, which prov
 #INFO:  JIT
 #INFO:  options specified:
 #INFO:       verbose,vlog=vlogfile
-#INFO:  
+#INFO:
 #INFO:  options in effect:
 #INFO:       verbose=1
 #INFO:       vlog=vlogfile

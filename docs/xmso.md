@@ -36,7 +36,7 @@ When a native method makes a call into the VM, the VM calculates whether the mem
 
         -Xmso<size>
 
-See [Using -X command-line options](x_jvm_commands.md) for more information about the `<size>` parameter.  
+See [Using -X command-line options](x_jvm_commands.md) for more information about the `<size>` parameter.
 
 ## Default setting
 

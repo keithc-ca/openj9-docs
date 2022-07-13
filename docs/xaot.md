@@ -91,8 +91,8 @@ The AOT compiler is enabled by default, but is only active for classes that are 
 
     `<method_name>` is the method or methods that are to be excluded; the wildcard `*` may be used. Specify as much of the full package, class and method as necessary.
 
-    For example, `-Xaot:exclude={test/sample/MyClass.testMethod()V}` excludes the single method specified.  
-    However, `-Xaot:exclude={test/sample/MyClass.testMethod()*}` excludes the method regardless of return type.  
+    For example, `-Xaot:exclude={test/sample/MyClass.testMethod()V}` excludes the single method specified.
+    However, `-Xaot:exclude={test/sample/MyClass.testMethod()*}` excludes the method regardless of return type.
     Similarly, `-Xaot:exclude={*}` excludes _all_ methods.
 
     :fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Note:** `exclude` has the same effect regardless of whether it's specified on [`-Xjit`](xjit.md) or `-Xaot`. In consequence, if you specify `-Xaot:exclude`, JIT compilation is also prevented and the methods specified are always interpreted.
@@ -135,7 +135,7 @@ The AOT compiler is enabled by default, but is only active for classes that are 
 
     `<method_name>` is the method or methods that are to be included (the wildcard `*` may be used; see [`-Xaot:exclude`](#exclude) for details).
 
-    :fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Note:** `loadLimit` can only be specified on `-Xaot`; it does not have an equivalent on [`-Xjit`](xjit.md). This option filters what AOT code the compiler is allowed to load from the shared classes cache. 
+    :fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Note:** `loadLimit` can only be specified on `-Xaot`; it does not have an equivalent on [`-Xjit`](xjit.md). This option filters what AOT code the compiler is allowed to load from the shared classes cache.
 
 ### `loadLimitFile`
 

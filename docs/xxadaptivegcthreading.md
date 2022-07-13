@@ -26,7 +26,7 @@
 
 :fontawesome-solid-exclamation-triangle:{: .warn aria-hidden="true"} **Restriction:** Currently, this feature is available only with the `gencon` GC policy.
 
-When this option is enabled, the active GC thread count is adjusted for each garbage collection (GC) cycle based on heuristics. That is, when a GC cycle successfully completes, the collector evaluates parallelism using aggregated thread statistics gathered during the completed cycle and projects a new thread count for the next cycle. For example, the thread count might be reduced if it is determined that an unnecessary overhead was incurred as a result of synchronization, lack of work sharing, or CPU availability. Similarly, the thread count may be increased if there's an opportunity to gain benefits from increased parallelism. 
+When this option is enabled, the active GC thread count is adjusted for each garbage collection (GC) cycle based on heuristics. That is, when a GC cycle successfully completes, the collector evaluates parallelism using aggregated thread statistics gathered during the completed cycle and projects a new thread count for the next cycle. For example, the thread count might be reduced if it is determined that an unnecessary overhead was incurred as a result of synchronization, lack of work sharing, or CPU availability. Similarly, the thread count may be increased if there's an opportunity to gain benefits from increased parallelism.
 
 :fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Notes:**
 

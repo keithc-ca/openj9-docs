@@ -180,11 +180,11 @@ Colour added by enabling attr_list under markdown_extensions: in mkdocs.yml, and
   padding: 0.1rem 0;
 }
 
-@media only screen and (max-width: 1040px), (min-device-width: 768px) and (max-device-width: 1024px) { 
+@media only screen and (max-width: 1040px), (min-device-width: 768px) and (max-device-width: 1024px) {
   .column-incubator h3 {
     font-size: 0.8rem;
   }
-  
+
   .column h3 {
     font-size: 0.8rem;
   }

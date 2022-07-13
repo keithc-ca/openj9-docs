@@ -40,7 +40,7 @@ See [Using -X command-line options](x_jvm_commands.md) for more information abou
 
 ## `-Xscminaot`
 
-If `-Xscminaot` is not specified, no space is reserved for AOT data. However, AOT data is still written to the cache until the cache is full or the `-Xscmaxaot` limit is reached. 
+If `-Xscminaot` is not specified, no space is reserved for AOT data. However, AOT data is still written to the cache until the cache is full or the `-Xscmaxaot` limit is reached.
 
 The value of `-Xscminaot` must not exceed the value of [`-Xscmx`](xscmx.md) or `-Xscmaxaot` and should be considerably less than the total cache size, because AOT data can be created only for cached classes. If the value of `-Xscminaot` equals the value of `-Xscmx`, no class data or AOT data can be stored.
 

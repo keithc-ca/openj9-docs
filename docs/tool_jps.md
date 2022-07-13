@@ -28,7 +28,7 @@ Use the `jps` tool to query running Java&trade; processes. The tool shows inform
 
     jps [<options>]
 
-where the available `<options>` are as follows:    
+where the available `<options>` are as follows:
 
 
 - `-J`: supplies arguments to the Java VM that is running the `jps` command. You can use multiple `-J` options, for example: `jps -J-Xmx10m -J-Dcom.ibm.tools.attach.enable=yes`

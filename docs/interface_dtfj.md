@@ -28,7 +28,7 @@ The Diagnostic Tool Framework for Java&trade; (DTFJ) is a Java application progr
 
 On Linux and AIX® operating systems, you can get more information from a system dump if you also have copies of executable files and libraries. You can run the `jpackcore` utility to collect these files into a single archive for use in subsequent problem diagnosis. For more information, see [Dump extractor](tool_jextract.md).
 
-The DTFJ API helps diagnostic tools access the following information:  
+The DTFJ API helps diagnostic tools access the following information:
 
 - Memory locations stored in the dump (System dumps only)
 - Relationships between memory locations and Java internals (System dumps only)

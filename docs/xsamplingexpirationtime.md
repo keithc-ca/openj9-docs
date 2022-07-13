@@ -22,20 +22,20 @@
 * Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
 -->
 
-# -XsamplingExpirationTime 
+# -XsamplingExpirationTime
 
-Disables JIT sampling after a specified amount of time. 
+Disables JIT sampling after a specified amount of time.
 
 When the JIT sampling thread is disabled, no processor cycles are used by an idle OpenJ9 VM.
 
-Use this option with care; after the sampling thread is disabled, you cannot reactivate it. However, because the profiling frequency is automatically reduced, you should not have to use this option. 
+Use this option with care; after the sampling thread is disabled, you cannot reactivate it. However, because the profiling frequency is automatically reduced, you should not have to use this option.
 
 Allow the sampling thread to run for long enough to identify important optimizations.
 
 ## Syntax
 
         -XsamplingExpirationTime<time>
-        
+
 : where `<time>` is specified in seconds.
 
 ## Explanation

@@ -22,7 +22,7 @@
 * Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
 -->
 
-# -XXnosuballoc32bitmem  
+# -XXnosuballoc32bitmem
 
 **(z/OS&reg; only)**
 
@@ -34,7 +34,7 @@ When compressed references are used with a 64-bit OpenJ9 VM on z/OS&reg;, this o
 
 | Setting                 | Effect  | Default                                                                            |
 |-------------------------|---------|:----------------------------------------------------------------------------------:|
-| `-XXnosuballoc32bitmem` | Enable  |                                                                                    |   
+| `-XXnosuballoc32bitmem` | Enable  |                                                                                    |
 | No setting              | Disable | :fontawesome-solid-check:{: .yes aria-hidden="true"}<span class="sr-only">yes</span> |
 
 ## Explanation

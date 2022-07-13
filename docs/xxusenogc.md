@@ -22,7 +22,7 @@
 * Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
 -->
 
-# -XX:\[+|-\]UseNoGC  
+# -XX:\[+|-\]UseNoGC
 
 The `-XX:+UseNoGC` option enables a garbage collection policy that expands the Java object heap in the normal way until the limit is reached, but memory is not
 reclaimed through garbage collection.

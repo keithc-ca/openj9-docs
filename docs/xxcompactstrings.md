@@ -26,7 +26,7 @@
 
 ![Start of content that applies only to Java 8 and later](cr/java8plus.png) This HotSpot option is reimplemented by OpenJ9 and when enabled causes an ISO8859-1 (also known as Latin-1) character representation to be used internally for `String` objects, while preserving full API compatibility.
 
-This feature provides heap space savings by using an 8-bit character set internally. Most benefit is gained when the majority of the `String` objects that your application uses can be encoded using the ISO8859-1 character encoding. 
+This feature provides heap space savings by using an 8-bit character set internally. Most benefit is gained when the majority of the `String` objects that your application uses can be encoded using the ISO8859-1 character encoding.
 
 If the option is not enabled, the JIT compiler is nevertheless optimized so that although there is no saving in heap space, there is also no performance penalty.
 

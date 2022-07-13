@@ -26,7 +26,7 @@
 
 When you create a shared classes cache, you can use these options to set a minimum and maximum number of bytes in the class cache that can be used for JIT data.
 
-When you run an application with the [`-Xshareclasses:verbose`](xshareclasses.md#verbose) option, the VM writes to the console the amount of JIT data that is not stored due to the current setting of the the maximum JIT data space. You can also get this information by using the `MemoryMXBean.getSharedClassCacheMaxJitDataUnstoredBytes()` method in the `com.ibm.lang.management` API. 
+When you run an application with the [`-Xshareclasses:verbose`](xshareclasses.md#verbose) option, the VM writes to the console the amount of JIT data that is not stored due to the current setting of the the maximum JIT data space. You can also get this information by using the `MemoryMXBean.getSharedClassCacheMaxJitDataUnstoredBytes()` method in the `com.ibm.lang.management` API.
 
 You can increase the maximum JIT data space size accordingly if you want to add the unstored data to the shared cache. However, the VM that provided the information no longer has the opportunity to store the JIT data. Subsequent VMs can store JIT data in the shared cache.
 
@@ -41,7 +41,7 @@ See [Using -X command-line options](x_jvm_commands.md) for more information abou
 
 ## Default behavior
 
-If `-Xscminjitdata` is not specified, no space is reserved for JIT data, although JIT data is still written to the cache until the cache is full or the `-Xscmaxjitdata` limit is reached. 
+If `-Xscminjitdata` is not specified, no space is reserved for JIT data, although JIT data is still written to the cache until the cache is full or the `-Xscmaxjitdata` limit is reached.
 
 ## Explanation
 

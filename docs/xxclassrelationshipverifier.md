@@ -39,7 +39,7 @@ This option enables and disables the recording of class relationships in the ver
 
 ## Explanation
 
-When enabled, this option delays validating the relationships between classes until the classes are required to be loaded during program execution. In this way, classes that are not required, are never loaded thus reducing VM startup time. 
+When enabled, this option delays validating the relationships between classes until the classes are required to be loaded during program execution. In this way, classes that are not required, are never loaded thus reducing VM startup time.
 
 A verify error is thrown if validation fails.
 

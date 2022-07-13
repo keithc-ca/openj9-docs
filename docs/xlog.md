@@ -41,7 +41,7 @@ Use of the `-Xlog` option is supported for GC logging only. The following table 
 |-------------------------|--------------------------------------------------|
 | An option that returns GC data. For example `-Xlog:gc`                | An equivalent OpenJ9 GC logging option is enabled. See the next table for more details. |
 | An option that, in the reference implementation, returns GC data and also other data. For example: `-Xlog`, `-Xlog:all`, `-Xlog:gc+<other_tag>`, or  `-Xlog:gc:stdout` | An equivalent OpenJ9 GC logging option is enabled as before but because non-GC data is not supported, the following error message is also produced: <br/> `JVMJ9VM007W Command-line option unrecognised: <option>`      |
-| An option that, in the reference implementation, returns only non-GC data            | Non-GC data is not supported, so the following error message is produced: <br/> `JVMJ9VM007W Command-line option unrecognised: <option>` |   
+| An option that, in the reference implementation, returns only non-GC data            | Non-GC data is not supported, so the following error message is produced: <br/> `JVMJ9VM007W Command-line option unrecognised: <option>` |
 
 The following table shows some examples of the mapping between `-Xlog` parameters and the equivalent OpenJ9 GC parameters:
 

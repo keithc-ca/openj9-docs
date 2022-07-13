@@ -42,7 +42,7 @@ Typically, the garbage collector expands the heap by the amount required to rest
 
 If heap expansion is required:
 
-- `-Xmine` forces the expansion to be at least the specified value. For example, `-Xmine10M` sets the expansion size to a minimum of 10 MB.  
+- `-Xmine` forces the expansion to be at least the specified value. For example, `-Xmine10M` sets the expansion size to a minimum of 10 MB.
 - `-Xmaxe` limits the expansion to the specified value. For example `-Xmaxe50M` prevents expansion by more than 50 MB. (`-Xmaxe0` allows unlimited expansion.)
 
 For the `gencon` GC policy, the values apply only to the tenure part of the heap. For the `balanced`, `optthruput`, and `optavgpause` GC policies, these values apply to the whole heap. This option cannot be used with the metronome GC policy (`-Xgcpolicy:metronome`) because the heap is always fully expanded.

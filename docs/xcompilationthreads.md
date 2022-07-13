@@ -22,7 +22,7 @@
 * Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
 -->
 
-# -XcompilationThreads 
+# -XcompilationThreads
 
 
 Use this option to specify the number of compilation threads that are used by the JIT compiler.
@@ -31,7 +31,7 @@ Use this option to specify the number of compilation threads that are used by th
 
         -XcompilationThreads<n>
 
-: where `<n>` is the number of threads, in the range 1-7 inclusive. Any number outside this range is ignored. 
+: where `<n>` is the number of threads, in the range 1-7 inclusive. Any number outside this range is ignored.
 
 : Setting the compilation threads to zero does not prevent the JIT from working. Instead, if you do not want the JIT to work, use the [`-Xint`](xint.md) option.
 

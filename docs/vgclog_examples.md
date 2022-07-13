@@ -205,7 +205,7 @@ The `<cycle-start>` element marks the start of the cycle. The attribute `type="s
 <cycle-start id="12394" type="scavenge" contextid="0" timestamp="2020-10-18T13:35:45.000" intervalms="418.231" />
 ```
 
-Most elements are labeled with an `id` attribute that increases in value incrementally, a`timestamp` attribute, and a `contextid` attribute. All elements that record GC increments and operations that are associated with a particular cycle have a `contextid` value that matches the `id` value of the cycle. The `<cycle-start>` element of this example cycle has an `id="12394"`, so all subsequent elements that have a `contextid="4"`, such as the `<gc-start>` increment element and the `<gc-op>` operation element, are associated with this particular example cycle.  
+Most elements are labeled with an `id` attribute that increases in value incrementally, a`timestamp` attribute, and a `contextid` attribute. All elements that record GC increments and operations that are associated with a particular cycle have a `contextid` value that matches the `id` value of the cycle. The `<cycle-start>` element of this example cycle has an `id="12394"`, so all subsequent elements that have a `contextid="4"`, such as the `<gc-start>` increment element and the `<gc-op>` operation element, are associated with this particular example cycle.
 
 The `<gc-start>` element records the first GC increment. In this `<gc-start>` section, you can find information about the amount of memory available (`<mem-info>`) and where it is located in the Java object heap.
 
@@ -495,7 +495,7 @@ The first activity in the cycle is recorded by a `<concurrent-kickoff>` element,
 </concurrent-kickoff>
 ```
 
-For this example, the `remainingFree` bytes value of 31.4 MB (32,933,776B) is approaching the `thresholdFreeBytes` value of 31.5 MB (33,024,922B) so a global cycle is triggered.  
+For this example, the `remainingFree` bytes value of 31.4 MB (32,933,776B) is approaching the `thresholdFreeBytes` value of 31.5 MB (33,024,922B) so a global cycle is triggered.
 
 This cycle aims to trace 228 MB (239,014,924B) during the concurrent increment. If the concurrent increment is interrupted by a card cleaning threshold value before it traces all 228 MB, the final STW increment completes the tracing during the STW pause.
 
@@ -557,7 +557,7 @@ After the partial GC cycle completes and the STW pause finishes, the log records
 </concurrent-global-final>
 ```
 
-The `reason` attribute of the `<concurrent-trace-info>` child element indicates that this final STW increment of the global cycle was triggered because a card-cleaning threshold was reached. The concurrent tracing was stopped prematurely and the `targetBytes` concurrent tracing target, recorded at the cycle start by `<concurrent-kickoff>`, was not achieved concurrently. If the concurrent tracing completes without interruption, the `<concurrent-trace-info` element logs `reason=tracing completed`.  
+The `reason` attribute of the `<concurrent-trace-info>` child element indicates that this final STW increment of the global cycle was triggered because a card-cleaning threshold was reached. The concurrent tracing was stopped prematurely and the `targetBytes` concurrent tracing target, recorded at the cycle start by `<concurrent-kickoff>`, was not achieved concurrently. If the concurrent tracing completes without interruption, the `<concurrent-trace-info` element logs `reason=tracing completed`.
 
 In the next section that begins with the `gc-start` element, you can find information about the amount of memory available (`<mem-info>`) and where it is located in the java object heap. This snapshot is taken before the final increment's operations and suboperations are run and can be compared with a similar snapshot that is taken afterward to understand the effect on the heap. The child element attribute values of the`<mem>` and `<mem-info>` elements indicate the status of the memory.
 
@@ -841,7 +841,7 @@ The following example is taken from a `balanced` policy verbose GC log. The outp
 
 To search for a `balanced` partial GC cycle, you can search for the `type` attribute value `partial gc` in `<cycle-start>` and `<cycle-end>` elements.
 
-The partial GC cycle reclaims memory in the heap for the allocation of new objects by reducing the number of used regions. The partial GC cycle always reduces used regions in the eden space and might also reclaim memory from older regions. Multiple partial GC cycles often run in between global mark phase increments of the [`balanced` global mark GC cycle](vgclog_examples.md#balanced-global-mark-gc-cycle).  
+The partial GC cycle reclaims memory in the heap for the allocation of new objects by reducing the number of used regions. The partial GC cycle always reduces used regions in the eden space and might also reclaim memory from older regions. Multiple partial GC cycles often run in between global mark phase increments of the [`balanced` global mark GC cycle](vgclog_examples.md#balanced-global-mark-gc-cycle).
 
 All the operations in a partial GC cycle run during a single STW pause, as shown in the following table:
 
@@ -880,7 +880,7 @@ The following general structure shows a `balanced` partial GC cycle. Some child 
 
   <mem></mem>                         (status of different types of memory)
 
-</mem-info>         
+</mem-info>
 
 </gc-start>
 
@@ -901,7 +901,7 @@ The following general structure shows a `balanced` partial GC cycle. Some child 
 
   <mem></mem>                         (status of different types of memory)
 
-</mem-info>         
+</mem-info>
 
 </gc-end>
 
@@ -1138,7 +1138,7 @@ The following structure shows a `balanced` global mark GC cycle. The lines are i
 
     <remembered-set>
 
-    </mem-info>         
+    </mem-info>
 
 </gc-start>
 
@@ -1164,7 +1164,7 @@ The following structure shows a `balanced` global mark GC cycle. The lines are i
 
 </concurrent-end type="GMP work packet processing"/>
 
-...                                       (application threads run. STW pauses stop    
+...                                       (application threads run. STW pauses stop
                                           and start application threads to run
                                           partial GC cycles.)
 
@@ -1172,7 +1172,7 @@ The following structure shows a `balanced` global mark GC cycle. The lines are i
 
 <gc-start type="global mark phase"/>      (2nd STW GMP subincrement starts)
 
-...   
+...
 
 <concurrent-start type="GMP work packet processing"/> (2nd concurrent GMP subincrement starts)
 
@@ -1201,12 +1201,12 @@ The following structure shows a `balanced` global mark GC cycle. The lines are i
 <gc-op  type="class unload" />            (STW class unload operation completed)
 
 <gc-end>                                  (1st GMP STW subincrement ends)
-...   
+...
 <gc-end type="global mark phase"/>        (final STW GMP subincrement ends. No concurrent subincrement runs)
 
 <cycle-end type="global mark phase"/>     (end of global mark cycle)
 
-<exclusive-end/>                          (STW pause ends)    
+<exclusive-end/>                          (STW pause ends)
 
 <exclusive-start/>                        (STW pause starts)
 
@@ -1518,7 +1518,7 @@ If the global cycle is triggered during a global mark cycle, the global cycle fo
 
  <mem></mem>                               (status of different types of memory)
 
-</mem-info>         
+</mem-info>
 
 </gc-start type="global garbage collect"/>
 
@@ -1538,7 +1538,7 @@ If the global cycle is triggered during a global mark cycle, the global cycle fo
 
 <mem></mem>                                 (status of different types of memory)
 
-</mem-info>         
+</mem-info>
 
 </gc-end type="global garbage collect">
 

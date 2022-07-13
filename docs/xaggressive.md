@@ -22,7 +22,7 @@
 * Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
 -->
 
-# -Xaggressive 
+# -Xaggressive
 
 Enables performance optimizations and new platform exploitation that are expected to be the default in future releases.
 

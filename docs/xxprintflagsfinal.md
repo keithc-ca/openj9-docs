@@ -44,7 +44,7 @@ Here is an example of typical output from `-XX:+PrintFlagsFinal`:
    size_t MaxHeapSize              = 4294967296          {product} {ergonomic}
  uint64_t MaxDirectMemorySize      = 3758096384          {product} {ergonomic}
 ```
- 
- 
+
+
 <!-- ==== END OF TOPIC ==== xxprintflagsfinal.md ==== -->
 

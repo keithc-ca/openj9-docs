@@ -38,7 +38,7 @@ You can use the `-verbose:sizes` option to find out the values that the VM is cu
 :fontawesome-solid-pencil-alt:{: .note aria-hidden="true"} **Notes:**
 
 - By default, the increment size (`-Xmoi`) is calculated on the expansion size, set by [`-Xmine`](xmine.md) and [`-Xminf`](xminf.md).  If you set `-Xmoi` to zero, no expansion is allowed.
-- For the `gencon` GC policy, the expansion increment applies to the tenure area of the heap.  
+- For the `gencon` GC policy, the expansion increment applies to the tenure area of the heap.
 
 This option is not supported for the `metronome` GC policy, because the heap is always fully expanded.
 

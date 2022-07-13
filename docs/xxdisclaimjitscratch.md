@@ -22,7 +22,7 @@
 * Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
 -->
 
-# -XX:\[+|-\]DisclaimJitScratch  
+# -XX:\[+|-\]DisclaimJitScratch
 
 :fontawesome-solid-exclamation-triangle:{: .warn aria-hidden="true"} **Restriction:** This option is deprecated; the option is accepted but ignored.
 

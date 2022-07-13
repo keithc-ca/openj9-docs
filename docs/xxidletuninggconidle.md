@@ -22,7 +22,7 @@
 * Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
 -->
 
-# -XX:\[+|-\]IdleTuningGcOnIdle  
+# -XX:\[+|-\]IdleTuningGcOnIdle
 
 **(Linux&reg; only)**
 

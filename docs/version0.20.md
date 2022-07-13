@@ -52,7 +52,7 @@ To learn more about support for OpenJ9 releases, including OpenJDK levels and pl
 
 Limited support is available in this release for the 64-bit ARM (AArch64) architecture. An early access build on OpenJDK 11 is available from the
 [AdoptOpenJDK community](https://adoptopenjdk.net/archive.html?variant=openjdk11&jvmVariant=openj9). See the [OpenJ9 release notes](https://github.com/eclipse-openj9/openj9/blob/master/doc/release-notes/0.20/0.20.md) for any known issues that are still being worked on before this
-platform is fully supported.  
+platform is fully supported.
 
 ### `-XX:[+|-]ExitOnOutOfMemoryError` option behavior update
 

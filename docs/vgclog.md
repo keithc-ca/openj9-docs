@@ -26,39 +26,39 @@
 
 Garbage collection (GC) reclaims used memory in the Java&trade; object heap for reuse. During cleanup of the heap, the verbose GC logs, when enabled, capture information about the different GC operations that are involved in the GC cycles. GC operations aim to reorganize or reclaim memory.
 
-Verbose GC logs contain information about GC operations to assist with the following actions:  
+Verbose GC logs contain information about GC operations to assist with the following actions:
 
 - Tuning GC and improving application performance.
-- Troubleshooting GC operations and policies. For example, analyzing long pauses, or determining how free memory is divided in the Java object heap before and after a GC cycle.  
+- Troubleshooting GC operations and policies. For example, analyzing long pauses, or determining how free memory is divided in the Java object heap before and after a GC cycle.
 
 Verbose GC logs, when enabled, begin capturing information as soon as GC is initialized.
 
-To help you visualize and analyze the GC, you can feed verbose GC log files into various diagnostic tools and interfaces. Examples include tools such as [Garbage Collection and Memory Visualizer (GCMV)](https://marketplace.eclipse.org/content/ibm-monitoring-and-diagnostic-tools-garbage-collection-and-memory-visualizer-gcmv) and online services such as [GCEasy](https://gceasy.io).  
+To help you visualize and analyze the GC, you can feed verbose GC log files into various diagnostic tools and interfaces. Examples include tools such as [Garbage Collection and Memory Visualizer (GCMV)](https://marketplace.eclipse.org/content/ibm-monitoring-and-diagnostic-tools-garbage-collection-and-memory-visualizer-gcmv) and online services such as [GCEasy](https://gceasy.io).
 
 For examples of log output, including guidance on how to analyze the logs, see [Log examples](vgclog_examples.md).
 
 A further diagnostic step is to run one or more traces on GC activity by using the [`-Xtgc` option](xtgc.md). Trace output provides more granular information to help diagnose GC problems or perform finer tuning.
 
-## How to generate a verbose GC log  
+## How to generate a verbose GC log
 
 You can enable verbose GC logs by specifying the `-verbose:gc` standard option when you start your application. For more information, see [standard command-line options](cmdline_general.md).
 
 The output of `-verbose:gc` is printed to STDERR by default. To print the log output to a file, append the [`-Xverbosegclog`](xverbosegclog.md) option. You can also use this option to print to a succession of files, where each file logs a specified number of GC cycles.
 
 ## Verbose GC log contents and structure
-The verbose GC logs are printed in XML format and consist of the following sections:  
+The verbose GC logs are printed in XML format and consist of the following sections:
 
 - A summary of your GC configuration, which is captured in the `<initialized>` XML element.
 
-- Information about the GC cycles that ran, including GC operations and GC increments.  
+- Information about the GC cycles that ran, including GC operations and GC increments.
 
 For definitions of GC cycles and operations, see [Garbage collection](gc_overview.md). For definitions of GC increments, see [GC increments and interleaving](#gc-increments-and-interleaving).
 
-The logs record when GC cycles and their increments start and end, and list the GC operations that run within these increments to manage or reclaim memory. You can also determine which type of event triggered the cycle or increment, and the amount of memory available to your application before and after processing.  
+The logs record when GC cycles and their increments start and end, and list the GC operations that run within these increments to manage or reclaim memory. You can also determine which type of event triggered the cycle or increment, and the amount of memory available to your application before and after processing.
 
 ### Initialization
 
-The log begins by recording the configuration of the OpenJ9 runtime virtual environment (VM) and details of the GC configuration(GC). The configuration is recorded by using child elements of the `<initialized>` element, for example:  
+The log begins by recording the configuration of the OpenJ9 runtime virtual environment (VM) and details of the GC configuration(GC). The configuration is recorded by using child elements of the `<initialized>` element, for example:
 
 ```xml
 
@@ -289,7 +289,7 @@ For more information about the XML elements and attribute values that are used f
 
 You can determine the GC increments and operations that are associated with a particular *instance* of a cycle by using the `contextid` and `id` attributes:
 
-1. Determine the ID of the GC cycle: find the value of the `id` attribute of the `<cycle-start>` element that denotes the start of the GC cycle.  Note: the `id` attribute increases incrementally with each GC event.  
+1. Determine the ID of the GC cycle: find the value of the `id` attribute of the `<cycle-start>` element that denotes the start of the GC cycle.  Note: the `id` attribute increases incrementally with each GC event.
 2. Search for the `contextid` attribute values that match the GC cycle's ID. All GC increments, operations, and concurrent events that are associated with a particular cycle have a `contextid` attribute whose value matches the GC cycle's ID.
 
 

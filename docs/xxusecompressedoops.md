@@ -37,7 +37,7 @@ This Oracle HotSpot option enables or disables compressed references in 64-bit J
 |`-XX:+UseCompressedOops`  | Enable |                                                                  |
 |`-XX:-UseCompressedOops`  | Disable|                                                                  |
 
-The `-XX:+UseCompressedOops` option is similar to specifying `-Xcompressedrefs`. Compressed references are used by default when the maximum memory size for an application is set above a platform-specific value. For more information, see [`-Xcompressedrefs`](xcompressedrefs.md).  
+The `-XX:+UseCompressedOops` option is similar to specifying `-Xcompressedrefs`. Compressed references are used by default when the maximum memory size for an application is set above a platform-specific value. For more information, see [`-Xcompressedrefs`](xcompressedrefs.md).
 
 
 

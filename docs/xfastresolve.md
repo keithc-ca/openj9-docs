@@ -22,7 +22,7 @@
 * Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
 -->
 
-# -Xfastresolve 
+# -Xfastresolve
 
 Tune performance by improving the resolution time for classes when the field count exceeds the specified threshold.
 
@@ -34,7 +34,7 @@ If profiling tools show significant costs in field resolution, change the thresh
 
         -Xfastresolve<n>
 
-: where `<n>` is the required threshold. 
+: where `<n>` is the required threshold.
 
 
 <!-- ==== END OF TOPIC ==== xfastresolve.md ==== -->
